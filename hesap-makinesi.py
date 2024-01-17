@@ -38,34 +38,21 @@ while True :
         print("-----------------------")
         # işlemler
         if secim == "1" :
-            index_no = 0
             sonuc = 0 # sonuc = veriler[1]
-            while index_no < len(veriler) :
-                sonuc = sonuc + veriler[index_no]
-                index_no += 1 # index_no = index_no + 1
-                # print(sonuc)
-            #islem_sonucu = sayı1 + sayı2
-            #print(f"Toplama işleminin sonucu = {islem_sonucu}")
+            for sayi in veriler :
+                sonuc = sonuc + sayi
         elif secim == "2" :
-            index_no = 1
             sonuc = veriler[0]
-            while index_no < len(veriler) :
+            for index_no in range(1, len(veriler)) :
                 sonuc = sonuc - veriler[index_no]
-                index_no += 1 # index_no = index_no + 1
-            #islem_sonucu = sayı1 - sayı2
-            #print(f"Çıkarma işleminin sonucu = {islem_sonucu}")
         elif secim == "3" :
-            index_no = 0
             sonuc = 1 # sonuc = veriler[1]
-            while index_no < len(veriler) :
-                sonuc = sonuc * veriler[index_no]
-                index_no += 1 # index_no = index_no + 1
+            for sayi in veriler :
+                sonuc = sonuc * sayi
         elif secim == "4" :
-            index_no = 1
             sonuc = veriler[0]
-            while index_no < len(veriler) :
-                sonuc = sonuc / veriler[index_no]
-                index_no += 1 # index_no = index_no + 1
+            for index_no in range(1,len(veriler)):
+                sonuc = sonuc // veriler[index_no]
         else :
             print("Yanlış seçim yaptınız, lütfen kontrol ediniz.!!!")
         # Çıktılar
