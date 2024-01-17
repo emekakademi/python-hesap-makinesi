@@ -23,26 +23,53 @@ while True :
         # Kullanıcıdan verilerin alınması
         print("-----------------------")
         print("Veri Girişi")
-        sayı1 = int(input("Birinci sayıyı giriniz : "))
-        sayı2 = int(input("İkinci sayıyı giriniz : "))
+        veriler = []
+        i = 1
+        while True:
+            veri = input(f"{i}. sayıyı giriniz ( Veri girişini tamamlamak için 'ç' harfine basınız!): ")
+            if veri == "ç" or veri == "Ç" :
+                break
+            else :
+                veri = int(veri)
+                veriler.append(veri)
+            i = i + 1
+        print("-----------------------")
+        print(f"Girişini yaptığınız veriler : {veriler}")
         print("-----------------------")
         # işlemler
         if secim == "1" :
-            islem_sonucu = sayı1 + sayı2
+            index_no = 0
+            sonuc = 0 # sonuc = veriler[1]
+            while index_no < len(veriler) :
+                sonuc = sonuc + veriler[index_no]
+                index_no += 1 # index_no = index_no + 1
+                # print(sonuc)
+            #islem_sonucu = sayı1 + sayı2
             #print(f"Toplama işleminin sonucu = {islem_sonucu}")
         elif secim == "2" :
-            islem_sonucu = sayı1 - sayı2
+            index_no = 1
+            sonuc = veriler[0]
+            while index_no < len(veriler) :
+                sonuc = sonuc - veriler[index_no]
+                index_no += 1 # index_no = index_no + 1
+            #islem_sonucu = sayı1 - sayı2
             #print(f"Çıkarma işleminin sonucu = {islem_sonucu}")
         elif secim == "3" :
-            islem_sonucu = sayı1 * sayı2
-            #print(f"Çarpma işleminin sonucu = {islem_sonucu}")
+            index_no = 0
+            sonuc = 1 # sonuc = veriler[1]
+            while index_no < len(veriler) :
+                sonuc = sonuc * veriler[index_no]
+                index_no += 1 # index_no = index_no + 1
         elif secim == "4" :
-            islem_sonucu = sayı1 / sayı2
-            #print(f"Bölme işleminin sonucu = {islem_sonucu}")
+            index_no = 1
+            sonuc = veriler[0]
+            while index_no < len(veriler) :
+                sonuc = sonuc / veriler[index_no]
+                index_no += 1 # index_no = index_no + 1
         else :
             print("Yanlış seçim yaptınız, lütfen kontrol ediniz.!!!")
         # Çıktılar
-        print(f"İşleminizin sonucu = {islem_sonucu}")
+        print(f"İşleminizin sonucu = {sonuc}")
         # print("Program kapatılıyor")
     
     print()
