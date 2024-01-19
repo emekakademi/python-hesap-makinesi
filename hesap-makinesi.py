@@ -33,7 +33,7 @@ def veri_girisi():
             break
         else :
             veri = int(veri)
-            veriler.appenvalueerror:d(veri)
+            veriler.append(veri)
         i = i + 1
     print("-----------------------")
     return veriler
@@ -59,7 +59,7 @@ def carpma(veriler):
     sonuc = 1 # sonuc = veriler[1]
     for sayi in veriler :
         sonuc = sonuc * sayi
-    print(sonuc)
+    print(f"Çarpma işleminin sonucu : {sonuc}")
 
 # bölme
 def bolme(veriler):
@@ -102,5 +102,9 @@ def ana_fonksiyon():
                 us_alma(veriler)
             case "6" :
                 cikis()
+        print()
+        print("=======================================")
+        print()    
+        
 
 ana_fonksiyon()
