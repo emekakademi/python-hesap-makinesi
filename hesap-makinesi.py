@@ -27,15 +27,24 @@ def veri_girisi():
     print("Veri Girişi")
     veriler = []
     i = 1
+    
     while True:
         veri = input(f"{i}. sayıyı giriniz ( Veri girişini tamamlamak için 'ç' harfine basınız!): ")
         if veri == "ç" or veri == "Ç" :
             break
         else :
-            veri = int(veri)
-            veriler.append(veri)
-        i = i + 1
+            try:
+                veri = int(veri)
+            except:
+                print("=======================================================")
+                print("YANLIŞ VERİ GİRDİNİZ, GİRDİĞİNİZ VERİLERİ KONTROL EDİNİZ")
+                print("=======================================================")
+                # ana_fonksiyon()
+            else:
+                veriler.append(veri)
+                i = i + 1
     print("-----------------------")
+
     return veriler
     # girilen veriler kontrol edilmiyor
     # hata denetimi
