@@ -45,14 +45,14 @@ def toplama(veriler):
     sonuc = 0
     for sayi in veriler :
         sonuc = sonuc + sayi
-    print("toplama sonucu",sonuc)
+    print(f"Toplama işleminin sonucu : {sonuc}")
 
 # çıkarma
 def cikarma(veriler):
     sonuc = veriler[0]
     for index_no in range(1, len(veriler)) :
         sonuc = sonuc - veriler[index_no]
-    print(sonuc)
+    print(f"Çıkarma işleminin sonucu : {sonuc}")
 
 # çarpma
 def carpma(veriler):
@@ -66,7 +66,7 @@ def bolme(veriler):
     sonuc = veriler[0]
     for index_no in range(1,len(veriler)):
         sonuc = sonuc // veriler[index_no]
-    print(sonuc)
+    print(f"Bölme işleminin sonucu : {sonuc}")
 
 def us_alma(veriler):
     pass
@@ -87,7 +87,8 @@ def ana_fonksiyon():
             cikis()
         else:
             veriler =  veri_girisi()
-        print(veriler)
+        print()
+        print(f"Girmiş olduğunuz veriler : {veriler}")
 
         match secim :
             case "1" :
