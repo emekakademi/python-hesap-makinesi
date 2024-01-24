@@ -16,12 +16,12 @@ def menu():
     print("-----------------------")
 
 # kullanıcı seçimi
-def islem_secme():
+def islem_secme() -> str:
     secim = input("Yapmak istediğiniz işlemin numarasını giriniz :")
     return secim
 
 # veri girişi
-def veri_girisi():
+def veri_girisi() -> list:
     # Kullanıcıdan verilerin alınması
     print("-----------------------")
     print("Veri Girişi")
@@ -50,28 +50,28 @@ def veri_girisi():
     # hata denetimi
 
 # toplama
-def toplama(veriler):
+def toplama(veriler:list):
     sonuc = 0
     for sayi in veriler :
         sonuc = sonuc + sayi
     print(f"Toplama işleminin sonucu : {sonuc}")
 
 # çıkarma
-def cikarma(veriler):
+def cikarma(veriler:list):
     sonuc = veriler[0]
     for index_no in range(1, len(veriler)) :
         sonuc = sonuc - veriler[index_no]
     print(f"Çıkarma işleminin sonucu : {sonuc}")
 
 # çarpma
-def carpma(veriler):
+def carpma(veriler:list):
     sonuc = 1 # sonuc = veriler[1]
     for sayi in veriler :
         sonuc = sonuc * sayi
     print(f"Çarpma işleminin sonucu : {sonuc}")
 
 # bölme
-def bolme(veriler):
+def bolme(veriler:list):
     sonuc = veriler[0]
     for index_no in range(1,len(veriler)):
         sonuc = sonuc // veriler[index_no]
@@ -115,6 +115,6 @@ def ana_fonksiyon():
         print()
         print("=======================================")
         print()    
-        
 
-ana_fonksiyon()
+if __name__ == "__main__":       
+    ana_fonksiyon()
